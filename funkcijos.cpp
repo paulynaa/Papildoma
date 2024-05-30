@@ -14,9 +14,6 @@ bool arltsimbolis(char simbolis) {
     return liet.find(simbolis) != string::npos; //grazina true jeigu surado lietuviska simboli nedaejus iki galo
 }
 
-bool arjunginys(string zodis){
-    return zodis.find("am") != string::npos;
-}
 string simboliunaikinimas(string ivestis) {
     string rezultatas;
     for (char simbolis : ivestis) { //praeinam pro visas zodzio raides
@@ -93,14 +90,11 @@ void skaitom(string pav, map<string, vector<int>>& sarasas, vector<string>& URL)
                     if (ieskourl(zodis)){
                         URL.push_back(zodis); // irasom url
                     }
-
                     else {
                         transform(zodis.begin(), zodis.end(), zodis.begin(), tolower); // keiciam i mazasias raides
                         string rezultatas;
                         rezultatas = simboliunaikinimas(zodis); // rezultatas= zodziai su mazosiomis ir be jokiu simboliu (,.() ir tt)
                         konteineris(rezultatas, kelinta, sarasas);
-                        string rezultatas2;
-                        rezultatas2 =
                     }
                 }
             }
@@ -114,23 +108,18 @@ void skaitom(string pav, map<string, vector<int>>& sarasas, vector<string>& URL)
 
 void spausdinam(map<string, vector<int>> &sarasas, vector<string> &URL) {
     ofstream iras("isvestis.txt");
-    iras << left << setw(18) << "Zodis" << setw(12) << "Pasikartojimai" << "Eilutes" << endl;
+    iras << left << setw(18) << "Zodis" << setw(18) << "Pasikartojimai" << "Eilutes" << endl;
     iras << string(100, '-') << endl;
 
     for(const auto& pair: sarasas) {
         if(pair.second.size() > 1) {
-            iras << left << setw(18) << pair.first << setw(12) << pair.second.size();
+            iras << left << setw(18) << pair.first << setw(18) << pair.second.size();
             for (const auto& eil : pair.second) {
                 iras  << eil << " ";
             }
             iras << endl;
         }
     }
-
-
-    iras << left << setw(18) << "Zodis su am" << setw(12) << "Pasikartojimai" << "Eilutes" << endl;
-    iras << string(100, '-') << endl;
-
 
     iras << "URL: " << endl;
     for(auto u: URL) {

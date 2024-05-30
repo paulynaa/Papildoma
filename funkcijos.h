@@ -2,7 +2,6 @@
 #define funkcijos_h
 #include "bibliotekos.h"
 int zodziuskaick(string eilut);
-bool arjunginys(string zodis);
 void skaitom(string pav, map<string, vector<int>>& sarasas, vector<string>& URL);
 string simboliunaikinimas(std::string ivestis);
 bool yraltsimbolis(char simbolis);
