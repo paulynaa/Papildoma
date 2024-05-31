@@ -36,7 +36,7 @@ Matome, kad atsakymai sutampa.
 1. Pirma, turite susikurti savo GitHub paskyrą. Galite pasinaudoti instrukcijomis: https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account
 2. Norėdami rasti kodą, įveskite nuorodą į paieškos eilę. Pavyzdžiui: https://github.com/paulynaa/Papildoma/tree/main
 3. Atidarykite "Command Prompt" (komandinę eilutę) savo kompiuteryje.
-4. Į terminalą įveskite šią komandą: git clone https://github.com/paulynaa/Paulina.git
+4. Į terminalą įveskite šią komandą: git clone https://github.com/paulynaa/Papildoma.git
 5. Atidarykite programą, kurioje norite paleisti kodą. Pvz. Paleiskite CodeBlocks IDE. Jei dar neparsisiuntėte jos, galite tai padaryti iš oficialios svetainės: https://www.codeblocks.org/downloads/
 6. Kai CodeBlocks įdiegtas, atidarykite jį iš jūsų programų sąrašo arba darbalaukio shortcut'o.
 7. Sukurkite naują projektą, pasirinkdami "File" > "New" > "Project..." iš meniu.
