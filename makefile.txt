@@ -1,0 +1,4 @@
+visi:
+ g++ -c main.cpp funkcijos.cpp
+programa:
+g++ -o Visi main.o funkcijos.o
